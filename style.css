@@ -17,14 +17,17 @@ body {
     height: 50%;
     display: inline-block;
     padding-top: 50px;
+    
+
 }
 
 .bunny{
-  width: 200px;px;
-  height:200px;
+  width: 50px;
+  height: 50px;
   position: relative;
-  margin-left: 40%;
+  margin-left: 10%;
   margin-top: 20px;
+  display: block;
 }
 
 .leftear{
@@ -223,6 +226,7 @@ body {
 	position: relative;
 	height: 170px;
 	width: 170px;
+    display: block;
     float: left;
 }
 
@@ -235,8 +239,8 @@ body {
 	background: #fff;
 	
 	/* Ear hair */
-	&::before,
-	&::after {
+	.ear::before,
+	.ear::after {
 		content: '';
 		position: absolute;
 		bottom: 24%;
@@ -246,7 +250,7 @@ body {
 		background: #161616;
 	}
 	
-	&::after {
+	.ear::after {
 		transform-origin: 50% 100%;
 	}
 }
@@ -256,12 +260,12 @@ body {
 	border-radius: 70% 30% 0% 0% / 100% 100% 0% 0%;
 	transform: rotate(-15deg);
 	
-	&::before,
-	&::after {
+	.ear--left::before,
+	.ear--left::after {
 		right: 10%;
 	}
 	
-	&::after {
+	.ear--left::after {
 		transform: rotate(-45deg);
 	}
 }
@@ -271,12 +275,12 @@ body {
 	border-radius: 30% 70% 0% 0% / 100% 100% 0% 0%;
 	transform: rotate(15deg);
 	
-	&::before,
-	&::after {
+	.ear--right::before,
+	.ear--right::after {
 		left: 10%;
 	}
 	
-	&::after {
+	.ear--right::after {
 		transform: rotate(45deg);
 	}
 }
@@ -300,7 +304,7 @@ body {
 	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 	
 	/* Eyelids */
-	&::after {
+	.eye::after {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -322,7 +326,7 @@ body {
 	}
 	
 	/* Tips of the eyes */
-	&::before {
+	.eye::before {
 		content: '';
 		position: absolute;
 		top: 60%;
@@ -336,7 +340,7 @@ body {
 .eye--left {
 	left: 0;
 	
-	&::before {
+	.eye--left::before {
 		right: -5%;
 	}
 }
@@ -344,7 +348,7 @@ body {
 .eye--right {
 	right: 0;
 	
-	&::before {
+	.eye--right::before {
 		left: -5%;
 	}
 }
@@ -369,16 +373,16 @@ body {
 		100% { transform: translate(0, 0) }
 	}
 	
-	.eye--left & {
+	.eye--left {
 		right: 30%;
 	}
 	
-	.eye--right & {
+	.eye--right {
 		left: 30%;
 	}
 	
 	/* Glare on the pupil */
-	&::after {
+	.eye::after {
 		content: '';
 		position: absolute;
 		top: 30%;
@@ -407,6 +411,7 @@ body {
     width: 100px;
     height: 90px;
     animation: heartbeat 1s infinite;
+    display: block;
     float: left;
 }
 #heart:before,
